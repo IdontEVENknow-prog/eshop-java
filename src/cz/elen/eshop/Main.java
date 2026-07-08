@@ -1,5 +1,6 @@
 package cz.elen.eshop;
 
+import cz.elen.eshop.exception.ProductNotFoundException;
 import cz.elen.eshop.model.Category;
 import cz.elen.eshop.model.Product;
 import cz.elen.eshop.repository.ProductRepository;
@@ -40,5 +41,21 @@ public class Main {
         service.addProduct(mouse);
 
         System.out.println(service.getAllProducts());
+
+        System.out.println(service.searchProductsByName("asus"));
+
+        try {
+
+            Product product = service.getProductById(999L);
+
+            System.out.println(product);
+
+        } catch (ProductNotFoundException e) {
+
+            System.out.println(e.getMessage());
+
+        }
+        System.out.println(service.getAllProductNames());
     }
+
 }
