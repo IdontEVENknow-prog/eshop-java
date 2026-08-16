@@ -1,0 +1,25 @@
+services:
+  mysql-db:
+    image: mysql:8.0
+    container_name: eshop-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: eshop_db
+      MYSQL_USER: eshop_user
+      MYSQL_PASSWORD: eshop_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  mongodb:
+    image: mongo:6.0
+    container_name: eshop-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mysql_data:
+  mongo_data:
