@@ -132,6 +132,8 @@ function App() {
             )}
           </section>
 
+
+
           {/* PRAVÝ PANEL: KOŠÍK */}
           <aside className="cart-sidebar">
             <div className="sticky-sidebar">
@@ -167,12 +169,18 @@ function App() {
             </div>
           </aside>
 
+            {/* SEKCE O NÁS HNED POD PRODUKTY */}
+            <section className="about-project-section">
+              <h2>O nasem projektu</h2>
+                <p>Analytický Eshop vznikl jako demonstrativní full-stack aplikace, která spojuje klientské rozhraní v Reactu s backendem v Java Spring Boot.</p>
+                <p>Hlavním přínosem řešeni je Polyglot Persistence architektura. Transakční data ukládáme do relační databáze MySQL. Paralelně s tím systém generuje auditní logy, které se ukládají do dokumentové databáze MongoDB. Celá tato infrastruktura je kontejnerizovaná pomocí nástroje Docker.</p>
+            </section>
         </div>
       </main>
 
       {/* NOVÁ PATIČKA WEB STRÁNKY */}
       <footer className="eshop-footer" id="contact">
-        <p>© 2026 AnalytickýEshop. Všechna práva vyhrazena. Kontakt: info@analytickyeshop.cz | Tel: +420 123 456 789</p>
+        <p>© 2026 AnalytickýEshop. Všechna práva vyhrazena. Kontakt: eplugarska@gmail.com | Tel: +420 777 681 260</p>
       </footer>
     </div>
   )
